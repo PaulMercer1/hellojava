@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
     @Test
-    public void HelloTest(){
-    assertTrue(true);
+    public void test_hello(){
+    assertTrue(false);
     }
 }
