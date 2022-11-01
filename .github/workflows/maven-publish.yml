@@ -9,7 +9,9 @@ on:
     - main
     - 'feature/**'
     - 'bugfix/**'
-
+    branches-ignore:
+    - 'skip/**'
+    
 jobs:
   build:
 
@@ -37,4 +39,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: Store artifact
+      uses: actions/upload-artifact@v3
+      with:
+        path: '**/*.jar'
+        name: JarFile
+        
 
