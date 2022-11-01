@@ -4,13 +4,12 @@
 name: Hello World
 
 on: 
+  workflow_dispatch:
   push:
     branches:
     - main
     - 'feature/**'
     - 'bugfix/**'
-    branches-ignore:
-    - 'skip/**'
     
 jobs:
   build:
